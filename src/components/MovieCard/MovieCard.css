@@ -15,7 +15,7 @@
     justify-content: space-between;
 
     padding: 20px;
-    width: 860px;
+    width: 1200px;
 
     
 }
@@ -28,7 +28,6 @@
 }
 
 .card_movie-img{
-    background-color: rgb(250, 235, 215);
     height: 170px;
 
     margin-bottom: 10px;
