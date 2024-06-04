@@ -5,20 +5,12 @@ import { useState } from 'react';
 
 function MovieCard({ movieData }) {
 
-  // 카드 하나를 클랙했을 때 선택된 카드 상태 관리
-  const [movieSelected, setMovieSelected] = useState({})
-
-  const clickCard = (id) => {
-    setMovieSelected(id)
-  }
-
   return (
       <div className="card_container">
           {movieData.map((movie) => (
             <div
               className='card_movie-container'
               key={movie.id}
-              onClick={() => clickCard(movie.id)}
               >
               <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none"}} >
                 <div className='card_movie-img'>
