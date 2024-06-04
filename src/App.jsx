@@ -20,8 +20,13 @@ function App() {
   // 비동기 요청하기 (한번에 하나의 일만)
   // -> 변수에 api 데이터를 모두 담은 후 응답 데이터의 결과를 setMovieData에 담기
   const fetchMovieData = async () => {
-    const response = await tmdbAPI.get('/trending/all/week')
-    setMovieData(response.data.results)
+    try{
+      const response = await tmdbAPI.get('/trending/all/week')
+      setMovieData(response.data.results)
+      
+    } catch (error) {
+      console.log(error.message);
+    }
   }
 
   // 컴포넌트 실행 시 데이터 가져오기는 함수 실행
