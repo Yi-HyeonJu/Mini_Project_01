@@ -21,6 +21,7 @@
 
 .detail_movie-details{
     width: 55vw;
+    min-width: 400px;
 
     margin: 50px 0 50px 0;
     padding: 0 20px;
@@ -28,12 +29,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    flex-wrap: nowrap;
 }
 
 .detail_movie-info{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .detail_movie-title{
@@ -45,15 +49,11 @@
     color: red;
 }
 
-.detail_genres{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .detail_genres > span{
     border: 1px solid black;
     border-radius: 15px;
     padding: 5px 15px;
+    margin-right: 15px;
 }
 
 .detail_overview{

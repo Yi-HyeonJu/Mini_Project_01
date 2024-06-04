@@ -37,7 +37,7 @@
     justify-content: space-between;
 }
 
-.navBar-buttons > button {
+.navBar-buttons  button {
     height: 30px;
     width: 80px;
 
@@ -47,7 +47,7 @@
     background-color: rgba(255, 255, 255, 0.659);
 }
 
-.navBar-buttons > button:hover{
+.navBar-buttons  button:hover{
     background-color: white;
     cursor: pointer;
 }
