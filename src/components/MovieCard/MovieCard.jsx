@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './MovieCard.css'
 import { useState } from 'react';
 
-function MovieCard({ movieList, movieData }) {
+function MovieCard({ movieData }) {
 
   // 카드 하나를 클랙했을 때 선택된 카드 상태 관리
   const [movieSelected, setMovieSelected] = useState({})
@@ -11,8 +11,6 @@ function MovieCard({ movieList, movieData }) {
   const clickCard = (id) => {
     setMovieSelected(id)
   }
-
-  console.log(movieData)
 
   return (
       <div className="card_container">
