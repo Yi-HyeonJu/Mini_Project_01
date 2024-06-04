@@ -38,12 +38,10 @@ function MovieDetail() {
   return (
     <div className='detail_container'>
       
-      <div className='detail_img'>
-        <img
-          className='detail_img__'
-          src={`http://image.tmdb.org/t/p/original${movieDetail.poster_path}`}
-        />
-      </div>
+      <img
+        className='detail_img__'
+        src={`http://image.tmdb.org/t/p/original${movieDetail.poster_path}`}
+      />
       
       <div className='detail_movie-details'>
         <div className='detail_movie-info'>

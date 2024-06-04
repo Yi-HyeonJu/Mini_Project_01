@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import './MovieCard.css'
-import { useState } from 'react';
 
 function MovieCard({ movieData }) {
 

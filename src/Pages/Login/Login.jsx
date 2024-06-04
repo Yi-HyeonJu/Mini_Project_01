@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 // - 이메일 또는 아이디 입력 필드
@@ -33,9 +34,13 @@ function Login(props) {
               placeholder=' 비밀번호'
               className='password_input'
             />
-          
-          <button className='login_button' type='submit'>로그인</button>
-        
+          <div className='login_buttons'>
+            <button className='login_button' type='submit'>로그인</button>
+            <Link to={'/'}>
+              <button className='back_button'>취소</button>
+            </Link>
+          </div>
+
         </div>
       </form>
       

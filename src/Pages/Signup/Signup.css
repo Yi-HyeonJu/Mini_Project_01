@@ -42,7 +42,16 @@
     padding: 10px;
 }
 
-.register_button{
+.register_buttons{
+    width: 250px;
+    margin: 0 10px 0 10px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register_button, .register_back_button{
     margin-top: 20px;
 
     width: 100px;
@@ -51,10 +60,16 @@
     border: none;
     border-radius: 13px;
 
-    background-color: rgba(255, 0, 0, 0.485);
+    background-color: rgba(129, 129, 129, 0.631);
 }
 
 .register_button:hover{
-    background-color: rgba(255, 0, 0, 0.718);
+    background-color: rgba(0, 0, 0, 0.718);
+    color: white;
+    cursor: pointer;
+}
+.register_back_button:hover{
+    background-color: rgba(0, 0, 0, 0.718);
+    color: white;
     cursor: pointer;
 }

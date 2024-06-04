@@ -50,9 +50,11 @@ function Signup(props) {
                 placeholder=' 비밀번호 확인'
                 className='re_password_input'
               />
-            
-              <button className='register_button' type='submit'>회원가입</button>
-            
+              <div className='register_buttons'>
+                <button className='register_button' type='submit'>회원가입</button>
+                <button className='register_back_button'>취소</button>
+              </div>
+
           </div>
         </form>
       
