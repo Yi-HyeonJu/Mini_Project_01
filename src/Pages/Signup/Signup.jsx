@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Signup.css'
 
 // - 회원가입 페이지 레이아웃을 구성합니다. 회원가입에 필요한 요소는 자유롭게 구성하되, 아래 항목은 필수로 포함합니다:
@@ -52,7 +53,9 @@ function Signup(props) {
               />
               <div className='register_buttons'>
                 <button className='register_button' type='submit'>회원가입</button>
-                <button className='register_back_button'>취소</button>
+                <Link to={'/'}>
+                  <button className='register_back_button'>취소</button>
+                </Link>
               </div>
 
           </div>
