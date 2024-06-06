@@ -7,7 +7,9 @@ function MovieCard({ movieData }) {
   return (
       <section className="card_container">
           {movieData.map((movie) => {
-            if(movie.backdrop_path || movie.poster_path !== undefined){
+            if((movie.backdrop_path !== null && movie.backdrop_path !== undefined) && 
+            (movie.poster_path !== null && movie.poster_path !== undefined)){
+              return(
               <div
                 className='card_movie-container'
                 key={movie.id}
@@ -26,7 +28,7 @@ function MovieCard({ movieData }) {
                 {movie.vote_average}
               </p>
             </div>
-          }
+          )}
         })}
       </section>
   );

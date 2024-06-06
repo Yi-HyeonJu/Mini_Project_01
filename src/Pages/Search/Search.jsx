@@ -56,7 +56,8 @@ const Search = () => {
     return(
       <section className="search_container">
         {searchData.map((movie => {
-          if(movie.backdrop_path || movie.poster_path !== undefined){
+          if((movie.backdrop_path !== null && movie.backdrop_path !== undefined) && 
+          (movie.poster_path !== null && movie.poster_path !== undefined)){
             return(
               <div className="search-movie" key={movie.id}>
                 <Link to={`/movie/${movie.id}`}  style={{ textDecoration: "none"}} >
