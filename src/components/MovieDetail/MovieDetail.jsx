@@ -33,14 +33,12 @@ function MovieDetail() {
     fetchMovieDetail();
   }, [id]);
 
-  console.log(movieDetail)
-
   return (
-    <div className='detail_container'>
+    <section className='detail_container'>
       
       <img
-        className='detail_img__'
-        src={`http://image.tmdb.org/t/p/original${movieDetail.poster_path}`}
+        className='detail_img_'
+        src={`http://image.tmdb.org/t/p/w500${movieDetail.poster_path}`}
       />
       
       <div className='detail_movie-details'>
@@ -67,7 +65,7 @@ function MovieDetail() {
           <p className='detail_overview'>{movieDetail.overview}</p>
       </div>
       
-    </div>
+    </section>
   );
 }
 

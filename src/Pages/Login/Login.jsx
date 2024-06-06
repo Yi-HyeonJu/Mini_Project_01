@@ -7,7 +7,7 @@ import './Login.css'
 
 function Login(props) {
   return (
-    <div className='login_container'>
+    <section className='login_container'>
       
       <div className='login-logo'>
           <img
@@ -44,7 +44,7 @@ function Login(props) {
         </div>
       </form>
       
-    </div>
+    </section>
     )
 }
 

@@ -4,33 +4,54 @@
     left: 0;
     right: 0;
     
-    height: 70px;
+    width: 100vw;
+    height: 100px;
+    
+    padding: 0 30px;
 
     background-color: black;
 
     display: flex;
     
     justify-content: space-between;
-}
-
-.navBar-logo{
-    height: 70px;
-    padding: 20px;
+    align-items: center;
 }
 
 .navBar-logoImg{
-    width: 110px;
+    width: 120px;
 }
 
 .navBar-logoImg:hover{
     cursor: pointer;
 }
 
-.navBar-buttons{
-    height: 70px;
-    width: 210px;
+.navBar-input{
+    width: 220px;
+    height: 37px;
 
-    padding: 20px 40px 20px 0;
+    padding: 5px 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, 0.219);
+    color: rgba(255, 255, 255, 0.581);
+}
+
+.navBar-input:hover{
+    cursor: pointer;
+}
+
+.navBar-input:focus{
+    outline: none;
+
+    background-color: white;
+    color: black;
+}
+
+.navBar-buttons{
+    width: fit-content;
+    height: fit-content;
 
     display: flex;
     align-items: center;
@@ -52,4 +73,86 @@
     background-color: white;
     color: black;
     cursor: pointer;
+}
+
+.login-button{
+    margin-right: 20px;
+}
+
+
+/* 모바일 뷰 (최대 600px) */
+@media only screen and (max-width: 600px){
+    .navBar_container{
+        height: 60px;
+
+        padding: 0 10px;
+    }
+
+    .navBar-logoImg{
+        width: 80px;
+    }
+    
+    .navBar-input{
+        width: 140px;
+        height: 25px;
+        
+        font-size: 10px;
+    }
+
+    .navBar-buttons .login-button{
+        height: 27px;
+        width: 50px;
+
+        font-size: 11px;
+    }
+
+    .register-button{
+        display: none;
+    }
+}
+
+/* 태블릿 뷰 (601px ~ 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px){
+    .navBar_container{
+        height: 80px;
+
+        padding: 0 15px;
+    }
+
+    .navBar-logoImg{
+        width: 100px;
+    }
+    
+    .navBar-input{
+        width: 170px;
+        height: 30px;
+        
+        font-size: 12px;
+    }
+
+    .navBar-buttons  button {
+        height: 30px;
+        width: 70px;
+    }
+    
+    .login-button{
+        margin-right: 10px;
+    }
+}
+
+/* 작은 데스크탑 뷰 (769px ~ 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .navBar_container{
+        height: 90px;
+
+        padding: 0 20px;
+    }
+
+    .navBar-logoImg{
+        width: 110px;
+    }
+    
+    .login-button{
+        margin-right: 15px;
+    }
 }

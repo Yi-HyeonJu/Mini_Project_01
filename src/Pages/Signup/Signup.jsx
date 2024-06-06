@@ -10,7 +10,7 @@ import './Signup.css'
 
 function Signup(props) {
   return (
-    <div className='signup_container'>
+    <section className='signup_container'>
       
         <div className='signup-logo'>
           <img
@@ -53,7 +53,7 @@ function Signup(props) {
               />
               <div className='register_buttons'>
                 <button className='register_button' type='submit'>회원가입</button>
-                <Link to={'/'}>
+                <Link to={'/login'}>
                   <button className='register_back_button'>취소</button>
                 </Link>
               </div>
@@ -61,7 +61,7 @@ function Signup(props) {
           </div>
         </form>
       
-    </div>
+    </section>
   );
 }
 

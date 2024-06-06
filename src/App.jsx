@@ -7,6 +7,7 @@ import tmdbAPI from './api/tmdbAPI';
 import NavBar from './components/NavBar/NavBar'
 import Signup from './Pages/Signup/Signup';
 import Login from './Pages/Login/Login';
+import Search from './Pages/Search/Search';
 
 function App() {
 
@@ -24,7 +25,6 @@ function App() {
       console.log(error.message);
     }
   }
-  console.log(movieData)
 
 
   // 컴포넌트 실행 시 데이터 가져오기는 함수 실행
@@ -51,6 +51,7 @@ function App() {
         <Route path='/movie/:id' element={ <MovieDetail/> } />
         <Route path='/signup' element={ <Signup/> }/>
         <Route path='/login' element={ <Login/> }/>
+        <Route path='/search' element={ <Search/> } />
       </Route>
     </Routes>
   )
