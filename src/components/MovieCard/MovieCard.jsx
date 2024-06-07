@@ -7,8 +7,7 @@ function MovieCard({ movieData }) {
   return (
       <section className="card_container">
           {movieData.map((movie) => {
-            if((movie.backdrop_path !== null && movie.backdrop_path !== undefined) && 
-            (movie.poster_path !== null && movie.poster_path !== undefined)){
+            if(movie.backdrop_path && movie.poster_path){
               return(
               <div
                 className='card_movie-container'

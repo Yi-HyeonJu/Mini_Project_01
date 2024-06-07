@@ -6,12 +6,14 @@ import { useDebounce } from "../../hooks/useDebounce";
 
 const Search = () => {
 
-  // useLocation().search
-  // URL의 search 뒤에 쿼리 문자열을 반환 ?q=${e.target.value}을 반환함
+  // useLocation().search 리액트라우터에서 제공하는 훅
+  // useLocation()훅이 현재 URL의 위치 객체를 반환하면
+  // 그 반환한 문자열의 search 속성으로 쿼리 문자열 부분만 가져옴
+  // URL의 ?로 시작하는 쿼리 문자열을 반환 ?q=${e.target.value}을 반환함
 
-  // new URLSearchParams
-  // 성자 함수로 new와 함께 사용하며 쿼리 문자열을 쉽게 파싱하고 조작할 수 있음
-  // 파싱은 문자열을 키-값 쌍으로 변환하는 것을 의미 (이 코드에서는 q : ${e.target.value})
+  // new URLSearchParams 내장 객체
+  // 생성자 함수로 new와 함께 사용하며 쿼리 문자열을 쉽게 파싱하고 조작할 수 있음
+  // 파싱은 문자열을 키-값 쌍으로 변환하는 것을 의미 (이 코드에서는 q & ${e.target.value})
   const useQuery = () => {
     return new URLSearchParams(useLocation().search)
   }
@@ -41,12 +43,11 @@ const Search = () => {
       console.log(error.message);
     }
   }
-  console.log(searchData)
 
   // 페이지가 렌더링 할 때 debounceSearchText가 있으면 렌더링
   // debounceSearchText가 바뀌면 다시 렌더링
   useEffect(() => {
-    if(debounceSearchText) {
+    if (debounceSearchText) {
       fetchSearchMovie(debounceSearchText)
     }
   }, [debounceSearchText])
@@ -56,8 +57,7 @@ const Search = () => {
     return(
       <section className="search_container">
         {searchData.map((movie => {
-          if((movie.backdrop_path !== null && movie.backdrop_path !== undefined) && 
-          (movie.poster_path !== null && movie.poster_path !== undefined)){
+          if(movie.backdrop_path && movie.poster_path){
             return(
               <div className="search-movie" key={movie.id}>
                 <Link to={`/movie/${movie.id}`}  style={{ textDecoration: "none"}} >
