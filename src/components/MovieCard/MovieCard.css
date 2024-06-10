@@ -42,14 +42,14 @@
 
 .card_movie-title{
     color: black;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
 
     margin-bottom: 5px;
 }
 
 .card_movie-vote_average{
-    font-size: 25px;
+    font-size: 15px;
     color: rgb(203, 35, 35);
 }
 
@@ -76,13 +76,13 @@
     }
 
     .card_movie-title{
-        font-size: 17px;
+        font-size: 19px;
         font-weight: 400;
         margin-right: 15px;
     }
 
     .card_movie-vote_average{
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 400;
     }
 }
@@ -108,13 +108,13 @@
     }
 
     .card_movie-title{
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
         margin-right: 15px;
     }
 
     .card_movie-vote_average{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 400;
     }
 }
@@ -133,8 +133,5 @@
 
     .card_movie-img{
         width: 100%;
-    }
-    .card_movie-vote_average{
-        font-size: 20px;
     }
 }
