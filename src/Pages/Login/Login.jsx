@@ -18,9 +18,11 @@ function Login() {
   // 반환되는 이블린 값인 true가 success에 담김
   // 값이 true면 메인으로 이동
   const checkLoginGoogle = async () => {
-    const success = await loginGoogle();
-    if (success) {
+    try {
+      await loginGoogle();
       navigate('/');
+    } catch (error) {
+      console.error("로그인 오류:", error);
     }
   };
 
@@ -28,7 +30,7 @@ function Login() {
     e.preventDefault();
     try {
       await loginEmail(emailValue, passValue);
-      navigate("/"); // 로그인 성공 시 navigate 함수를 사용하여 리다이렉트
+      navigate('/'); // 로그인 성공 시 navigate 함수를 사용하여 리다이렉트
     } catch (error) {
       console.error("로그인 오류:", error);
     }

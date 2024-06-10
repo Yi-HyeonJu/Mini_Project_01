@@ -162,7 +162,15 @@
     .register-button{
         display: none;
     }
-    
+    .navBar-buttons  button{
+        width: 55px;
+        height: 25px;
+    }
+
+    .my-info{
+        font-size: 13px;
+    }
+
     .dropdown-menu {
         height: 35px;
     }
@@ -170,7 +178,6 @@
     .dropdown-menu:hover{
         cursor: pointer;
     }
-    
     
     .dropdown-menu > span {
         font-size:10px;

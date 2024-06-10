@@ -21,19 +21,21 @@ function Signup() {
   const register = async (e) => {
     e.preventDefault();
     try {
-      const registerSuccess = await fireBaseRegister(nameValue, emailValue, passValue, rePassValue);
-      if (registerSuccess) {
-        navigate('/');
-      }
+      await fireBaseRegister(nameValue, emailValue, passValue, rePassValue);
+      navigate('/');
     } catch (error) {
       console.error("회원가입 오류:", error);
     }
   };
 
   const checkLoginGoogle = async () => {
-    const success = await loginGoogle();
-    if (success) {
+    try {
+      await loginGoogle();
+      console.log()
+
       navigate('/');
+    } catch (error) {
+      console.error("구글 로그인 오류:", error);
     }
   };
 
