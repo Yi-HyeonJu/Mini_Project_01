@@ -42,14 +42,14 @@
 
 .card_movie-title{
     color: black;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
 
     margin-bottom: 5px;
 }
 
 .card_movie-vote_average{
-    font-size: 12px;
+    font-size: 25px;
     color: rgb(203, 35, 35);
 }
 
@@ -76,7 +76,7 @@
     }
 
     .card_movie-title{
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 400;
         margin-right: 15px;
     }
@@ -104,7 +104,7 @@
     }
 
     .card_movie-title, .card_movie-vote_average{
-        display: inline-block;
+        display: block;
     }
 
     .card_movie-title{
@@ -133,5 +133,8 @@
 
     .card_movie-img{
         width: 100%;
+    }
+    .card_movie-vote_average{
+        font-size: 20px;
     }
 }

@@ -66,7 +66,7 @@ const Search = () => {
                     src={`http://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
                   <p className="search-movie-title">{movie.name || movie.original_title}</p>
                 </Link>
-                <p className="search-movie-vote_average">{movie.vote_average}</p>
+                <p className="search-movie-vote_average">평점 : {movie.vote_average}</p>
               </div>
             )
           }

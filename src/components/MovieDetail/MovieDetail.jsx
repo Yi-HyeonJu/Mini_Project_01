@@ -35,7 +35,6 @@ function MovieDetail() {
 
   return (
     <section className='detail_container'>
-      
       <img
         className='detail_img_'
         src={`http://image.tmdb.org/t/p/w500${movieDetail.poster_path}`}
@@ -64,7 +63,6 @@ function MovieDetail() {
 
           <p className='detail_overview'>{movieDetail.overview}</p>
       </div>
-      
     </section>
   );
 }

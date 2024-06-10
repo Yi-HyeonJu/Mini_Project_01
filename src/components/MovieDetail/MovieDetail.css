@@ -55,7 +55,8 @@
 /* 모바일 뷰 (최대 600px) */
 @media only screen and (max-width: 600px){
     .detail_container{
-        padding: 60px;
+        margin-top: 60px;
+        padding: 0 100px 0 100px;
         
         flex-direction: column;
     }
@@ -67,6 +68,14 @@
         height: 450px;
     }
     
+
+    .full_img{
+        width: 100vw;
+        height: 100vh;
+    
+        background-repeat: no-repeat;
+    }
+
     .detail_movie-details{
         margin-top: 20px;
 
@@ -81,7 +90,7 @@
     }
     
     .detail_movie-vote_average{
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 400;
     }
 
@@ -163,7 +172,7 @@
     }
     
     .detail_movie-vote_average{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .detail_overview{
