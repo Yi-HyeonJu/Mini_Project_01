@@ -43,13 +43,15 @@ const NavBar = () => {
         alt='넷플릭스 로고'
         onClick={() => (window.location.href = "/")}
       />
-      <input
-        type='text'
-        className='navBar-input'
-        placeholder='영화를 검색해주세요.'
-        value={inputValue}
-        onChange={changeInput}
-      />
+      {(location.pathname !== '/login' && location.pathname !== '/signup') && (
+        <input
+          type='text'
+          className='navBar-input'
+          placeholder='영화를 검색해주세요.'
+          value={inputValue}
+          onChange={changeInput}
+        />
+      )}
       {localStorage.getItem('userData') ? (
         <div className='navBar-buttons dropmenu'>
           <div className={`dropdown-menu ${showMenu ? 'show' : ''}`}>
