@@ -24,7 +24,7 @@ function MovieCard({ movieData }) {
                     </p>
                 </Link>
               <p className='card_movie-vote_average'>
-                {movie.vote_average}
+                평점 : {movie.vote_average}
               </p>
             </div>
           )}
