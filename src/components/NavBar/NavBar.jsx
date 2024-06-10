@@ -18,25 +18,7 @@ const NavBar = () => {
   };
 
   // 유저 상태 관리
-  const [user, setUser] = useState(null);
-
-  // 컴포넌트가 마운트될 때 사용자 상태를 확인
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // 사용자 정보가 있을 경우
-        setUser(user);
-      } else {
-        // 사용자 정보가 없을 경우 (로그아웃 상태)
-        setUser(null);
-        localStorage.removeItem('userData');
-      }
-      console.log('로그인 유저정보:', user);
-    });
-
-    // 컴포넌트가 언마운트될 때 구독 해제
-    return () => unsubscribe();
-  }, []);
+  const [user, setUser] = useState(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : {});
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -48,6 +30,7 @@ const NavBar = () => {
     await logout(auth);
     // 로그아웃 시 사용자 정보 초기화
     setUser(null);
+    localStorage.removeItem('userData')
     // 홈 페이지로 리다이렉트
     navigate('/');
   };
@@ -67,7 +50,7 @@ const NavBar = () => {
         value={inputValue}
         onChange={changeInput}
       />
-      {user ? (
+      {localStorage.getItem('userData') ? (
         <div className='navBar-buttons dropmenu'>
           <div className={`dropdown-menu ${showMenu ? 'show' : ''}`}>
             <span className='dropDown_cart'>관심 목록</span>
