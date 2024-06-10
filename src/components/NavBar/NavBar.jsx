@@ -54,11 +54,11 @@ const NavBar = () => {
       )}
       {localStorage.getItem('userData') ? (
         <div className='navBar-buttons dropmenu'>
+          <button className='my-info' onClick={toggleMenu}>내 정보</button>
           <div className={`dropdown-menu ${showMenu ? 'show' : ''}`}>
             <span className='dropDown_cart'>관심 목록</span>
             <span className='dropDown_logout' onClick={logoutUser}>로그아웃</span>
           </div>
-          <button className='my-info' onClick={toggleMenu}>내 정보</button>
         </div>
       ) : (
         <div className='navBar-buttons'>

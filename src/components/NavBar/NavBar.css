@@ -96,8 +96,7 @@
 
     position: absolute;
 
-    top: 0%;
-    right: 110%;
+    right: 120%;
 
     height: 45px;
     width: 70px;
@@ -147,24 +146,20 @@
         
         font-size: 10px;
     }
-
-    .navBar-buttons .login-butto{
-        height: 27px;
-        width: 50px;
-
-        font-size: 11px;
-    }
-
+    
     .login-button{
-        margin: 0;
+        margin-right: 2px;
     }
 
-    .register-button{
-        display: none;
-    }
-    .navBar-buttons  button{
-        width: 55px;
+    .navBar-buttons{
         height: 25px;
+    }
+
+    .navBar-buttons  button{
+        width: 43px;
+        height: 23px;
+
+        font-size: 10px;
     }
 
     .my-info{
@@ -186,7 +181,14 @@
     }
     
     .show {
+        top: 120%;
+        right: 0px;
+        bottom: 10px;
+    
+        height: 32px;
         width: 60px;
+
+        background-color: rgb(65, 65, 65);
     }
 }
 
