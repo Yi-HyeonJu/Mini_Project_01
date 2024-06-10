@@ -42,14 +42,14 @@
 
 .search-movie-title{
     color: black;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
 
     margin-bottom: 5px;
 }
 
 .search-movie-vote_average{
-    font-size: 12px;
+    font-size: 15px;
     color: rgb(203, 35, 35);
 }
 
@@ -94,13 +94,13 @@
     }
 
     .search-movie-title{
-        font-size: 17px;
+        font-size: 19px;
         font-weight: 400;
         margin-right: 15px;
     }
 
     .search-movie-vote_average{
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 400;
     }
 
@@ -135,13 +135,13 @@
     }
 
     .search-movie-title{
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
         margin-right: 15px;
     }
 
     .search-movie-vote_average{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 400;
     }
 
