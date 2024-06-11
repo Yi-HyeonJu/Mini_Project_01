@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 100vh;
 }
 
 .detail_img_{
@@ -12,6 +14,7 @@
 }
 
 .detail_movie-details{
+    height: 600px;
     width: 50%;
     
     display: flex;
@@ -122,12 +125,12 @@
     }
     
     .detail_movie-title{
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 500;
     }
     
     .detail_movie-vote_average{
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 500;
     }
 
@@ -162,12 +165,12 @@
     }
 
     .detail_movie-title{
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 600;
     }
     
     .detail_movie-vote_average{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .detail_overview{
