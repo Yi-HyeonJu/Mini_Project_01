@@ -1,11 +1,10 @@
 .detail_container{
-    padding-top: 100px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
+    
+    padding: 60px 100px;
+    margin-top: 100px;
 }
 
 .detail_img_{
