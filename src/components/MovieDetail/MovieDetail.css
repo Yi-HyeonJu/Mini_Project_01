@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     
-    padding: 60px 100px;
+    padding: 110px 30px;
     margin-top: 100px;
 }
 
@@ -54,7 +54,9 @@
 @media only screen and (max-width: 600px){
     .detail_container{
         margin-top: 60px;
-        padding: 60px 100px;
+        padding: 60px 45px;
+
+        height: fit-content;
         
         flex-direction: column;
     }
@@ -77,6 +79,7 @@
         margin-top: 20px;
 
         width: 310px;
+        height: fit-content;
     
         display: block;
     }
@@ -108,10 +111,10 @@
 /* 태블릿 뷰 (601px ~ 768px) */
 @media only screen and (min-width: 601px) and (max-width: 768px){
     .detail_container{
-        padding: 0 20px;
-        padding-top: 80px;
+        margin-top: 80px;
+        padding: 90px 20px;
 
-        height: 100vh;
+        height: 100%;
     }
 
     .detail_img_{
@@ -148,10 +151,10 @@
 /* 작은 데스크탑 뷰 (769px ~ 1024px) */
 @media only screen and (min-width: 769px) and (max-width: 1024px){
     .detail_container{
-        padding: 0 20px;
-        padding-top: 90px;
+        margin-top: 90px;
+        padding: 100px 20px;
 
-        height: 100vh;
+        height: 100%;
     }
 
     .detail_img_{
