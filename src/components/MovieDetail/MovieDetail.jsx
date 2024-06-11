@@ -35,6 +35,7 @@ function MovieDetail() {
 
   return (
     <section className='detail_container'>
+    
       <img
         className='detail_img_'
         src={`http://image.tmdb.org/t/p/w500${movieDetail.poster_path}`}
@@ -43,14 +44,8 @@ function MovieDetail() {
       <div className='detail_movie-details'>
         <div className='detail_movie-info'>
           <span className='detail_movie-title'>{movieDetail.title}</span>
-          <span className='detail_movie-vote_average'>{movieDetail.vote_average}</span>
+          <span className='detail_movie-vote_average'>평점 : {movieDetail.vote_average}</span>
         </div>
-        
-        {/* <div className='detail_genres'>
-        {movieDetail.genres.map((genre) => (
-            <span key={genre.id}>{genre.name}</span>
-          ))}
-        </div> */}
 
         {/* 비동기 처리로 인해 데이터가 담기기전 map이 실행이 되어서 movieDetail 데이터가 있을 때 실행되도록 수정 */}
         {movieDetail && (
@@ -60,9 +55,9 @@ function MovieDetail() {
             ))}
           </div>
         )}
-
           <p className='detail_overview'>{movieDetail.overview}</p>
       </div>
+      
     </section>
   );
 }
