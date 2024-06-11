@@ -72,14 +72,16 @@ export const loginEmail = async (email, password) => {
     // Firebase에서 제공하는 오류 코드 사용
     switch (error.code) {
       case 'auth/user-not-found':
-        alert('가입되지 않은 이메일입니다.');
+        alert('등록되지 않은 이메일 입니다.');
+        break;
+      case 'auth/missing-password':
+        alert('비밀번호를 입력해주세요.');
         break;
       case 'auth/wrong-password':
         alert('입력한 비밀번호가 올바르지 않습니다.');
         break;
-      default:
-        alert('로그인에 실패하였습니다.');
-        break;
+      case 'auth/too-many-requests':
+        alert('로그인 요청이 많습니다. 잠시후 다시 시도해주세요')
     }
     throw error; // 오류를 다시 던져서 호출자에게 전달
   }
@@ -89,13 +91,9 @@ export const loginEmail = async (email, password) => {
 export const fireBaseRegister = async (name, email, password, re_password) => {
   if (!name || !email || !password || !re_password) {
     alert('빈 칸 없이 모두 작성해주세요.');
-  }
-
-  if (!validateEmail(email)) {
+  } else if (!validateEmail(email)) {
     alert('유효한 이메일 주소를 입력해주세요.');
-  }
-
-  if (password !== re_password) {
+  } else if (password !== re_password) {
     alert('비밀번호가 일치하지 않습니다.');
   }
 
@@ -108,17 +106,14 @@ export const fireBaseRegister = async (name, email, password, re_password) => {
     return registerInfo.user;
   } catch (error) {
     switch (error.code) {
-      case 'auth/invalid-email':
-        alert('이메일 주소의 형식이 유효하지 않습니다.');
-        break;
+      // case 'auth/invalid-email':
+      //   alert('이메일 주소의 형식이 유효하지 않습니다.');
+      //   break;
       case 'auth/email-already-in-use':
         alert('입력한 이메일 주소가 이미 사용 중입니다.');
         break;
       case 'auth/weak-password':
         alert('비밀번호는 6자리 이상으로 해주세요.');
-        break;
-      default:
-        alert('회원가입에 실패하였습니다.');
         break;
     }
     throw error;
