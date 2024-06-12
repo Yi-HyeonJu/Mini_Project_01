@@ -9,15 +9,20 @@ import {
   signOut // 로그아웃
 } from 'firebase/auth';
 
-const firebaseKey = import.meta.env.VITE_FIREBASE_KEY;
+const firebaseKey = import.meta.env.VITE_FIREBASE_API_KEY;
+const authDomain = import.meta.env.VITE_FIREBASE_AUTH_DOMAUN
+const projectId = import.meta.env.VITE_FIREBASE_PROJECT_ID
+const storageBucket = import.meta.env.VITE_FIREBASE_STORAGE_BUKET
+const messagingSenderId = import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID
+const appId = import.meta.env.VITE_FIREBASE_APP_ID
 
 const firebaseConfig = {
   apiKey: firebaseKey,
-  authDomain: "miniproject-react.firebaseapp.com",
-  projectId: "miniproject-react",
-  storageBucket: "miniproject-react",
-  messagingSenderId: "138540969898",
-  appId: "1:138540969898:web:eafd18e2ed72d9019405d3"
+  authDomain: authDomain,
+  projectId: projectId,
+  storageBucket: storageBucket,
+  messagingSenderId: messagingSenderId,
+  appId: appId,
 };
 
 // Initialize Firebase
