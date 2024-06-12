@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import './MovieCard.css'
+import Banner from '../Banner/Banner';
 
 function MovieCard({ movieData }) {
 
   return (
+    <>
+      < Banner />
       <section className="card_container">
           {movieData.map((movie) => {
             if(movie.backdrop_path && movie.poster_path){
@@ -30,6 +33,7 @@ function MovieCard({ movieData }) {
           )}
         })}
       </section>
+    </>
   );
 }
 

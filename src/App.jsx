@@ -8,7 +8,6 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './Pages/Signup/Signup';
 import Login from './Pages/Login/Login';
 import Search from './Pages/Search/Search';
-import Banner from './components/Banner/Banner';
 
 function App() {
 

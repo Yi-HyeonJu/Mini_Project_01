@@ -74,6 +74,9 @@ export const loginEmail = async (email, password) => {
       case 'auth/user-not-found':
         alert('등록되지 않은 이메일 입니다.');
         break;
+      case 'auth/invalid-credential':
+        alert('이메일 또는 비밀번호가 올바르지 않습니다.')
+        break
       case 'auth/missing-password':
         alert('비밀번호를 입력해주세요.');
         break;
