@@ -1,28 +1,111 @@
 .Banner_container {
-    position: relative;
+  position: relative;
 
-    width: 100%;
-    height: 350px;
+  width: 100%;
+  height: 320px;
 
-    margin-top: 80px;
+  margin-top: 100px;
+  padding: 20px;
+
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* 더 강한 그림자 효과 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.2)
+  ); /* 그라데이션 배경 */
 }
 
-.swiper-slide > img {
-    height: 100%;
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  transition: transform 0.5s ease-in-out; /* 슬라이드 전환 애니메이션 */
 }
 
+.swiper-slide .slide-content {
+  position: relative;
+
+  text-align: center;
+
+  width: 80%; /* 슬라이드 간격을 위해 너비 조정 */
+}
+
+.swiper-slide .slide-content > img {
+  height: 280px;
+  border-radius: 15px; /* 이미지 모서리 둥글게 */
+  transition: transform 0.4s, filter 0.4s, box-shadow 0.4s; /* 마우스 오버 효과 추가 */
+  filter: brightness(0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 기본 그림자 효과 */
+}
+
+.swiper-slide .slide-content > img:hover {
+  transform: scale(1.1); /* 마우스 오버 시 이미지 확대 */
+  filter: brightness(1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* 마우스 오버 시 그림자 강화 */
+  z-index: 1;
+}
+
+.swiper-slide .reflection img {
+  height: 100%;
+  width: auto;
+}
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ff0000;
+  color: white;
+  font-size: 35px; /* 폰트 크기 조정 */
+  width: 60px; /* 버튼 크기 조정 */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7); /* 더 진한 반투명 배경 */
+  border-radius: 50%; /* 버튼을 원형으로 */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 기본 그림자 효과 */
+  position: relative;
+  z-index: 1;
+}
+.swiper-button-prev {
+  left: 3%;
+  bottom: 65%;
+}
+.swiper-button-next {
+  position: relative;
+  left: 90%;
+  top: -80%;
+}
 
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 마우스 오버 시 그림자 강화 */
 }
 
 .swiper-pagination {
-    bottom: 10px; /* 페이지네이션 위치 조정 */
-    text-align: center;
-    /* 필요한 추가 스타일 */
+  bottom: 15px; /* 페이지네이션 위치 조정 */
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: white; /* 페이지네이션 기본 색상 */
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1; /* 활성화된 페이지네이션 불렛의 불투명도 */
+  transform: scale(1.2); /* 활성화된 불렛 크기 확대 */
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 20px; /* 페이지네이션 위치 조정 */
 }
