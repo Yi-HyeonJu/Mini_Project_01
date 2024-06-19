@@ -1,137 +1,136 @@
-.card_container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-evenly;
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
 
-    padding: 20px 15px;
-    margin-top: 100px;
-    
-    width: 100vw;
+  padding: 20px 15px;
+  margin-top: 30px;
+
+  width: 100vw;
 }
 
-.card_movie-container{
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
+.card_movie-container {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
 
-    transition: transform 0.7s ease-in-out;
-    -webkit-transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
 }
 
-.card_movie-container:hover{
-    transition: background-color 0.3s ease-in-out;
+.card_movie-container:hover {
+  transition: background-color 0.3s ease-in-out;
 
-    background-color: rgba(128, 128, 128, 0.636);
+  background-color: rgba(128, 128, 128, 0.636);
 }
 
-.card_movie-container:hover{
-    transform: scale(1.05);
+.card_movie-container:hover {
+  transform: scale(1.05);
 }
 
-.card_movie-img{
-    width: 270px;
+.card_movie-img {
+  width: 270px;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    border-radius: 5px;
+  border-radius: 5px;
 
-    box-shadow: 5px 5px 5px rgba(43, 40, 40, 0.621);
+  box-shadow: 5px 5px 5px rgba(43, 40, 40, 0.621);
 }
 
-.card_movie-title{
-    color: black;
-    font-size: 17px;
-    font-weight: 500;
+.card_movie-title {
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
 
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-.card_movie-vote_average{
-    font-size: 15px;
-    color: rgb(203, 35, 35);
+.card_movie-vote_average {
+  font-size: 15px;
+  color: rgb(203, 35, 35);
 }
 
 /* 모바일 뷰 (최대 600px) */
-@media only screen and (max-width: 600px){
-    .card_container{
-        margin-top: 60px;
-        padding: 20px 30px;
+@media only screen and (max-width: 600px) {
+  .card_container {
+    padding: 20px 30px;
 
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 
-    .card_movie-container{
-        width: 100%;
-        border-radius: 10px;
-    }
+  .card_movie-container {
+    width: 100%;
+    border-radius: 10px;
+  }
 
-    .card_movie-img{
-        width: 100%;
-    }
+  .card_movie-img {
+    width: 100%;
+  }
 
-    .card_movie-title, .card_movie-vote_average{
-        display: inline-block;
-    }
+  .card_movie-title,
+  .card_movie-vote_average {
+    display: inline-block;
+  }
 
-    .card_movie-title{
-        font-size: 19px;
-        font-weight: 400;
-        margin-right: 15px;
-    }
+  .card_movie-title {
+    font-size: 19px;
+    font-weight: 400;
+    margin-right: 15px;
+  }
 
-    .card_movie-vote_average{
-        font-size: 15px;
-        font-weight: 400;
-    }
+  .card_movie-vote_average {
+    font-size: 15px;
+    font-weight: 400;
+  }
 }
 
 /* 태블릿 뷰 (601px ~ 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px){
-    .card_container{
-        margin-top: 80px;
-        padding: 20px 30px;
-    }
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .card_container {
+    padding: 20px 30px;
+  }
 
-    .card_movie-container{
-        width: 50%;
-        border-radius: 10px;
-    }
+  .card_movie-container {
+    width: 50%;
+    border-radius: 10px;
+  }
 
-    .card_movie-img{
-        width: 100%;
-    }
+  .card_movie-img {
+    width: 100%;
+  }
 
-    .card_movie-title, .card_movie-vote_average{
-        display: block;
-    }
+  .card_movie-title,
+  .card_movie-vote_average {
+    display: block;
+  }
 
-    .card_movie-title{
-        font-size: 16px;
-        font-weight: 400;
-        margin-right: 15px;
-    }
+  .card_movie-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 15px;
+  }
 
-    .card_movie-vote_average{
-        font-size: 13px;
-        font-weight: 400;
-    }
+  .card_movie-vote_average {
+    font-size: 13px;
+    font-weight: 400;
+  }
 }
 
 /* 작은 데스크탑 뷰 (769px ~ 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px){
-    .card_container{
-        margin-top: 90px;
-        padding: 20px 15px;
-    }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .card_container {
+    padding: 20px 15px;
+  }
 
-    .card_movie-container{
-        width: 50%;
-        border-radius: 10px;
-    }
+  .card_movie-container {
+    width: 30%;
+    border-radius: 10px;
+  }
 
-    .card_movie-img{
-        width: 100%;
-    }
+  .card_movie-img {
+    width: 100%;
+  }
 }

@@ -1,111 +1,111 @@
 .Banner_container {
   position: relative;
-
   width: 100%;
   height: 320px;
-
   margin-top: 100px;
-  padding: 20px;
-
+  padding: 20px 0 25px 0;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* 더 강한 그림자 효과 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.2)
-  ); /* 그라데이션 배경 */
+  );
 }
 
-.swiper-slide {
+.Banner_container .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
-
-  transition: transform 0.5s ease-in-out; /* 슬라이드 전환 애니메이션 */
+  transition: transform 0.5s ease-in-out;
 }
 
-.swiper-slide .slide-content {
+.Banner_container .swiper-slide .slide-content {
   position: relative;
-
   text-align: center;
-
-  width: 80%; /* 슬라이드 간격을 위해 너비 조정 */
+  width: 100%;
 }
 
-.swiper-slide .slide-content > img {
-  height: 280px;
-  border-radius: 15px; /* 이미지 모서리 둥글게 */
-  transition: transform 0.4s, filter 0.4s, box-shadow 0.4s; /* 마우스 오버 효과 추가 */
+.Banner_container .swiper-slide .slide-content > img {
+  height: 260px;
+  width: 180px;
+  border-radius: 15px;
+  transition: transform 0.4s, filter 0.4s, box-shadow 0.4s;
   filter: brightness(0.9);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 기본 그림자 효과 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* 이미지가 다른 요소들 위로 올라오도록 */
 }
 
-.swiper-slide .slide-content > img:hover {
-  transform: scale(1.1); /* 마우스 오버 시 이미지 확대 */
+.Banner_container .swiper-slide.swiper-slide-active .slide-content > img:hover {
+  transform: scale(1.1);
   filter: brightness(1);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* 마우스 오버 시 그림자 강화 */
-  z-index: 1;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
 
-.swiper-slide .reflection img {
-  height: 100%;
-  width: auto;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+.Banner_container .swiper-button-next,
+.Banner_container .swiper-button-prev {
   color: white;
-  font-size: 35px; /* 폰트 크기 조정 */
-  width: 60px; /* 버튼 크기 조정 */
-  height: 60px;
+  font-weight: 900;
+
+  width: 30px;
+  height: 50px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7); /* 더 진한 반투명 배경 */
-  border-radius: 50%; /* 버튼을 원형으로 */
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 기본 그림자 효과 */
-  position: relative;
-  z-index: 1;
-}
-.swiper-button-prev {
-  left: 3%;
-  bottom: 65%;
-}
-.swiper-button-next {
-  position: relative;
-  left: 90%;
-  top: -80%;
+
+  transition: transform 0.2s;
+  position: absolute;
+  z-index: 10;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 마우스 오버 시 그림자 강화 */
+.Banner_container .swiper-button-prev {
+  left: 10px;
+}
+
+.Banner_container .swiper-button-next {
+  right: 10px;
+}
+
+.Banner_container .swiper-button-next:hover,
+.Banner_container .swiper-button-prev:hover {
+  transform: scale(1.2);
 }
 
 .swiper-pagination {
-  bottom: 15px; /* 페이지네이션 위치 조정 */
-  text-align: center;
+  height: 15px;
 }
 
-.swiper-pagination-bullet {
-  background: white; /* 페이지네이션 기본 색상 */
+.Banner_container .swiper-pagination-bullet {
+  background: rgba(40, 40, 40, 0.476);
   opacity: 0.7;
   transition: opacity 0.3s, transform 0.3s;
 }
 
-.swiper-pagination-bullet-active {
-  opacity: 1; /* 활성화된 페이지네이션 불렛의 불투명도 */
-  transform: scale(1.2); /* 활성화된 불렛 크기 확대 */
+.Banner_container .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.5);
+  background: rgba(40, 40, 40, 0.728);
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: 20px; /* 페이지네이션 위치 조정 */
+/* 모바일 뷰 (최대 600px) */
+@media only screen and (max-width: 600px) {
+  .Banner_container {
+    margin-top: 60px;
+  }
+}
+
+/* 태블릿 뷰 (601px ~ 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .Banner_container {
+    margin-top: 80px;
+  }
+}
+
+/* 작은 데스크탑 뷰 (769px ~ 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .Banner_container {
+    margin-top: 90px;
+  }
 }

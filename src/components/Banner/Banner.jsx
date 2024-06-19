@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import tmdbAPI from "../../api/tmdbAPI";
 import "./Banner.css";
-import Swiper from "swiper";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
 function Banner() {
   const [upMovieData, setUpMovieData] = useState([]);
@@ -24,24 +23,37 @@ function Banner() {
 
   useEffect(() => {
     if (upMovieData.length > 0) {
+      // Swiper 초기화
       const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4, // 한 번에 3개의 슬라이드 표시
-        spaceBetween: 20, // 슬라이드 간의 간격
-        centeredSlides: true, // 중앙에 슬라이드 위치
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
+        freeMode: true, // 슬라이더를 움직이는 세기에따라 많이 넘어감
+        slidesPerView: 4, // 한번에 보여지는 숫자
+        spaceBetween: -100, // 페이지와 페이지 사이의 간격
+        centeredSlides: true, // 선택된 슬라이드를 중심으로 할지
+        loof: true, // 반복 기능
+        //자동 스크를링
+        autoplay: {
+          //시간 1000 이 1초
+          delay: 5000,
+          disableOnInteraction: false,
         },
+        effect: "coverflow", // 페이지 전환 효과
+        // 페이지 전환효과의 상세 설정
+        coverflowEffect: {
+          rotate: 20,
+          stretch: -30,
+          depth: 300,
+          modifier: 1,
+          slideShadows: false,
+        },
+        // 페이지 네이게이션
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        // 페이징 바 기능
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
+          clickable: true, // 클릭 가능
         },
       });
 
@@ -52,7 +64,7 @@ function Banner() {
   }, [upMovieData]);
 
   return (
-    <section className="Banner_container swiper mySwiper">
+    <section className="Banner_container mySwiper">
       <div className="swiper-wrapper">
         {upMovieData.map((movie) => (
           <div key={movie.id} className="swiper-slide">
@@ -66,8 +78,9 @@ function Banner() {
         ))}
       </div>
       <div className="swiper-pagination"></div>
-      <div className="swiper-button-prev">{"<"}</div>
-      <div className="swiper-button-next">{">"}</div>
+
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
     </section>
   );
 }

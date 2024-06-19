@@ -1,178 +1,177 @@
-.search_container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-evenly;
+.search_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
 
-    padding: 20px 15px;
-    margin-top: 100px;
-    
-    width: 100vw;
+  padding: 20px 15px;
+  margin-top: 100px;
+
+  width: 100vw;
 }
 
-.search-movie{
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
+.search-movie {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
 
-    transition: transform 0.7s ease-in-out;
-    -webkit-transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
 }
 
-.search-movie:hover{
-    transition: background-color 0.3s ease-in;
+.search-movie:hover {
+  transition: background-color 0.3s ease-in;
 
-    background-color: rgba(128, 128, 128, 0.636);
+  background-color: rgba(128, 128, 128, 0.636);
 }
 
-.search-movie:hover{
-    transform: scale(1.05);
+.search-movie:hover {
+  transform: scale(1.05);
 }
 
-.search-movie_img{
-    width: 270px;
+.search-movie_img {
+  width: 270px;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    border-radius: 5px;
+  border-radius: 5px;
 
-    box-shadow: 5px 5px 5px rgba(43, 40, 40, 0.621);
+  box-shadow: 5px 5px 5px rgba(43, 40, 40, 0.621);
 }
 
-.search-movie-title{
-    color: black;
-    font-size: 17px;
-    font-weight: 500;
+.search-movie-title {
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
 
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-.search-movie-vote_average{
-    font-size: 15px;
-    color: rgb(203, 35, 35);
+.search-movie-vote_average {
+  font-size: 15px;
+  color: rgb(203, 35, 35);
 }
 
-.error{
-    width: 100vw;
-    height: 100vh;
+.error {
+  width: 100vw;
+  height: 100vh;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.error_messege{
-    font-size: 30px;
-    font-weight: 700;
+.error_messege {
+  font-size: 30px;
+  font-weight: 700;
 }
-
 
 /* 모바일 뷰 (최대 600px) */
-@media only screen and (max-width: 600px){
-    .search_container{
-        width: 100%;
-        height: 100%;
+@media only screen and (max-width: 600px) {
+  .search_container {
+    width: 100%;
+    height: 100%;
 
-        margin-top: 60px;
-        padding: 20px 30px;
+    margin-top: 60px;
+    padding: 20px 30px;
 
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 
-    .search-movie{
-        width: 100%;
-        border-radius: 10px;
-    }
+  .search-movie {
+    width: 100%;
+    border-radius: 10px;
+  }
 
-    .search-movie_img{
-        width: 100%;
-    }
+  .search-movie_img {
+    width: 100%;
+  }
 
-    .search-movie-title, .search-movie-vote_average{
-        display: inline-block;
-    }
+  .search-movie-title,
+  .search-movie-vote_average {
+    display: inline-block;
+  }
 
-    .search-movie-title{
-        font-size: 19px;
-        font-weight: 400;
-        margin-right: 15px;
-    }
+  .search-movie-title {
+    font-size: 19px;
+    font-weight: 400;
+    margin-right: 15px;
+  }
 
-    .search-movie-vote_average{
-        font-size: 15px;
-        font-weight: 400;
-    }
+  .search-movie-vote_average {
+    font-size: 15px;
+    font-weight: 400;
+  }
 
-
-    .error_messege{
-        font-size: 13px;
-        font-weight: 400;
-    }
+  .error_messege {
+    font-size: 13px;
+    font-weight: 400;
+  }
 }
 
 /* 태블릿 뷰 (601px ~ 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px){
-    .search_container{
-        margin-top: 80px;
-        padding: 20px 30px;
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .search_container {
+    margin-top: 80px;
+    padding: 20px 30px;
 
-        width: 100%;
-        height: 100%;
-    }
+    width: 100%;
+    height: 100%;
+  }
 
-    .search-movie{
-        width: 50%;
-        border-radius: 10px;
-    }
+  .search-movie {
+    width: 50%;
+    border-radius: 10px;
+  }
 
-    .search-movie_img{
-        width: 100%;
-    }
+  .search-movie_img {
+    width: 100%;
+  }
 
-    .search-movie-title, .search-movie-vote_average{
-        display: block;
-    }
+  .search-movie-title,
+  .search-movie-vote_average {
+    display: block;
+  }
 
-    .search-movie-title{
-        font-size: 16px;
-        font-weight: 400;
-        margin-right: 15px;
-    }
+  .search-movie-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 15px;
+  }
 
-    .search-movie-vote_average{
-        font-size: 13px;
-        font-weight: 400;
-    }
+  .search-movie-vote_average {
+    font-size: 13px;
+    font-weight: 400;
+  }
 
-    .error_messege{
-        font-size: 20px;
-        font-weight: 500;
-    }
+  .error_messege {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
 
 /* 작은 데스크탑 뷰 (769px ~ 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px){
-    .search_container{
-        width: 100%;
-        height: 100%;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .search_container {
+    width: 100%;
+    height: 100%;
 
-        margin-top: 90px;
-        padding: 20px 15px;
-    }
+    margin-top: 90px;
+    padding: 20px 15px;
+  }
 
-    .search-movie{
-        width: 50%;
-        border-radius: 10px;
+  .search-movie {
+    width: 30%;
+    border-radius: 10px;
+  }
 
-    }
+  .search-movie_img {
+    width: 100%;
+  }
 
-    .search-movie_img{
-        width: 100%;
-    }
-
-    .error_messege{
-        font-size: 25px;
-        font-weight: 600;
-    }
+  .error_messege {
+    font-size: 25px;
+    font-weight: 600;
+  }
 }
