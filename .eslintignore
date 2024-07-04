@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# 빌드된 파일
+dist/
+build/
+out/
+
+# 환경 설정 파일
+.env
+.env.* 
+
+# 로그 파일
+logs/
+*.log
+
+# 잠금 파일
+package-lock.json
